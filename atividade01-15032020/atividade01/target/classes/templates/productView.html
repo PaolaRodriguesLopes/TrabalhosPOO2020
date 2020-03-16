@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+<body>
+
+    <h3 style="text-align: center;">Atividade 01 - Paola Rodrigues Lopes 180115</h3>
+    
+
+    <div th:if="${product}" class="container">
+        <br>
+        <br>
+        <table class="bordered striped centered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Valor (R$)</th>
+                    <th>QTD Estoque (UN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product: ${product}">
+                    <td th:text="${product?.code}" />
+                    <td th:text="${product?.name}"/>
+                    <td th:text="${product?.value}"/>
+                    <td th:text="${product?.stock}"/>
+                
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    <div th:unless="${product}" style="display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: x-large;">
+        <p style="
+        text-align: center;
+        border: red 1px solid;
+        width: 50%;
+        background-color: #ee6e736b;
+        padding: 10px;
+        border-radius: 5px;">Produto não Existe</p>
+    </div>
+</body>
+</html>
