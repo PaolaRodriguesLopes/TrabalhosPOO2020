@@ -13,57 +13,63 @@ public class Employee implements Serializable{
      */
     private static final long serialVersionUID = 1L;
     @Id
-    private Integer matricula;
-    private String nome;
-    private String cargo;
-    private String cpf;
-    private Double salario;
+    private Integer code;
+    private String name;
+    private String jobPosition;
+    private String nationalIdentity;
+    private Double salary;
 
-    public Integer getMatricula() {
-        return matricula;
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
 
-    public void setMatricula(Integer matricula) {
-        this.matricula = matricula;
+    public Integer getCode() {
+        return code;
     }
 
-    public String getNome() {
-        return nome;
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getName() {
+        return name;
     }
 
-    public String getCargo() {
-        return cargo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public String getJobPosition() {
+        return jobPosition;
     }
 
-    public String getCpf() {
-        return cpf;
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public String getNationalIdentity() {
+        return nationalIdentity;
     }
 
-    public Double getSalario() {
-        return salario;
+    public void setNationalIdentity(String nationalIdentity) {
+        this.nationalIdentity = nationalIdentity;
     }
 
-    public void setSalario(Double salario) {
-        this.salario = salario;
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Funcionario [cargo=" + cargo + ", cpf=" + cpf + ", matricula=" + matricula + ", nome=" + nome
-                + ", salario=" + salario + "]";
+        return "Employee [code=" + code + ", jobPosition=" + jobPosition + ", name=" + name + ", nationalIdentity="
+                + nationalIdentity + ", salary=" + salary + "]";
     }
+
+   
 
     
     

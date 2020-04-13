@@ -8,11 +8,11 @@
 <body>
     <table>
         <tr th:each="fun : ${funcionarios}">
-            <td th:text="${fun.matricula}"></td>
-            <td th:text="${fun.nome}"></td>
-            <td th:text="${fun.cargo}"></td>
-            <td th:text="${fun.cpf}"></td>
-            <td th:text="${fun.salario}"></td>
+            <td th:text="${fun.code}"></td>
+            <td th:text="${fun.name}"></td>
+            <td th:text="${fun.jobPosition}"></td>
+            <td th:text="${fun.nationalIdentity}"></td>
+            <td th:text="${fun.salary}"></td>
         </tr>
     </table>
 </body>
