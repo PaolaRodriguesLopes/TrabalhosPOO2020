@@ -20,7 +20,10 @@ public class EmployeeController {
     {
         ModelAndView mv = new ModelAndView("Funcionarios");
 
-        mv.addObject("alunos", service.getEmployee());
+        mv.addObject("funcionarios", service.getEmployee());
+
+        System.out.println("Funcionarios ====");
+        System.out.println(service.getEmployee());
 
         return mv;
     }

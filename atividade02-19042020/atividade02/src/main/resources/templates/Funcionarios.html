@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+</head>
+<body>
+    <table>
+        <tr th:each="fun : ${funcionarios}">
+            <td th:text="${fun.matricula}"></td>
+            <td th:text="${fun.nome}"></td>
+            <td th:text="${fun.cargo}"></td>
+            <td th:text="${fun.cpf}"></td>
+            <td th:text="${fun.salario}"></td>
+        </tr>
+    </table>
+</body>
+</html>
