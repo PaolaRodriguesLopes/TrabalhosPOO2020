@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity 
-public class Funcionario implements Serializable{
+public class Employee implements Serializable{
 
     /**
      *
