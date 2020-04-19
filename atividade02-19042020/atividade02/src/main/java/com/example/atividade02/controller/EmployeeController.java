@@ -21,12 +21,9 @@ public class EmployeeController {
     @GetMapping("/funcionarios")
     public ModelAndView getEmployee ()
     {
-        ModelAndView mv = new ModelAndView("Funcionarios");
+        ModelAndView mv = new ModelAndView("FuncionariosTemplates");
 
         mv.addObject("funcionarios", service.getEmployee());
-
-        System.out.println("Funcionarios ====");
-        System.out.println(service.getEmployee());
 
         return mv;
     }
@@ -36,6 +33,6 @@ public class EmployeeController {
     {
         service.insert(employee);
 
-        return "employees";
+        return "redirect:/funcionarios";
     }
 }
