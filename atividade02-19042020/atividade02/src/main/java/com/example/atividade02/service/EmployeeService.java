@@ -20,4 +20,9 @@ public class EmployeeService {
 
     }
 
+    public void insert (Employee employee)
+    {
+        repository.save(employee);
+    }
+
 }

@@ -6,6 +6,15 @@
     <title>Funcionarios</title>
 </head>
 <body>
+
+    <form th:action="@{/salvar}" method="POST"> 
+        <input type="text" name="name"/>
+        <input type="text" name="jobPosition"/>
+        <input type="text" name="nationalIdentity"/>
+        <input type="text" name="salary"/>
+
+        <input type="submit" value="Salvar">
+    </form>
     <table>
         <tr th:each="fun : ${funcionarios}">
             <td th:text="${fun.code}"></td>
